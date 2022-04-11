@@ -116,7 +116,7 @@ function setStatusClass(element, correct){
         number = number+1
         console.log(number)
         //////////////////////////////////
-        countingWins.innerHTML = "Counting the wins: " + (number);
+        countingWins.innerHTML = "Counting the wins # 12: " + (number);
     }else {
     element.classList.add('wrong')
         console.log('INSIDE THE RED COLOR')
