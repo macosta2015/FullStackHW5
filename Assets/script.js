@@ -42,7 +42,8 @@ function RunTimer(){
 let shuffleQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame)
-startButton.addEventListener('click', RunTimer)
+//Replaced the event listener by adding a function
+// startButton.addEventListener('click', RunTimer)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
@@ -50,6 +51,10 @@ nextButton.addEventListener('click', () => {
 
 function startGame(){
     console.log('started')
+
+    //Running the RunTimer function that begings the clock
+    RunTimer()
+
     startButton.classList.add('hide')
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -97,10 +102,10 @@ function selectAnswer(e){
     if (shuffleQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
         console.log('LOOPING INSIDE THE QUESTIONS: ' + currentQuestionIndex)
-        console.log('Hello World')
         countingLoops.innerHTML = "Questions answered: " + (currentQuestionIndex+1);
     }
     else{
+        console.log('DONE WITH QUESTION')
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
         console.log('END OF THE LOOP')
@@ -133,7 +138,7 @@ function checkScore(number){
     //         console.log('Inside Function and If: Bigger than 5')
     //         checkScore()
     //     }
-    console.log('switch statement')
+    // console.log('switch statement')
     switch(number){
         case 5:
             console.log('Value: ' + number)
