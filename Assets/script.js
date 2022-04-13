@@ -138,6 +138,7 @@ function selectAnswer(e){
         countingLoops.innerHTML = "Questions answered: " + (currentQuestionIndex+1);
 
     }
+
     else{
         console.log('DONE WITH QUESTION')
         startButton.innerText = ('Restart')
@@ -145,10 +146,10 @@ function selectAnswer(e){
         console.log('AFTER DONE WITH QUESTION')
 
 
-        // //Code for getting the users input
-        // var nameScore = window.prompt("What is your name and scores?")
-        // pushData(nameScore)
-        // console.log("The nameScore is: " + nameScore)
+        //Code for getting the users input
+        var nameScore = window.prompt("What is your name and scores?")
+        pushData(nameScore)
+        console.log("The nameScore is: " + nameScore)
     }
 }
 
