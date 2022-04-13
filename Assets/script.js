@@ -12,6 +12,33 @@ let number = 0
 let timeSecond = 10;
 const timeH = document.querySelector("h1");
 
+
+// For the arrays
+var myArr = ["A","B","C","D"];
+
+
+//Running pushData
+function pushData()
+{
+    // get value from the input text
+    var inputText = document.getElementById('inputText').value;
+    
+    // append data to the array
+    myArr.push(inputText);
+    
+    var pval = "";
+    
+    for(i = 0; i < myArr.length; i++)
+    {
+        pval = pval + myArr[i] + "<br/>";
+    }
+    
+    // display array data
+    document.getElementById('pText').innerHTML = pval;
+}
+
+
+//Running timer function
 function RunTimer(){
     displayTime(timeSecond);
     const countDown = setInterval(() => {
