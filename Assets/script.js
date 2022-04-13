@@ -137,7 +137,9 @@ function selectAnswer(e){
     }
     else{
         console.log('DONE WITH QUESTION')
-         pushData()
+        var nameScore = window.prompt("What is your name and scores?")
+        console.log("The nameScore is: " + nameScore)
+        //  pushData()
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
         console.log('END OF THE LOOP')
