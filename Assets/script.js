@@ -9,7 +9,7 @@ const countingLoops = document.getElementById('coutning-loops')
 let number = 0
 
 // For the timer 
-let timeSecond = 60;
+let timeSecond = 10;
 const timeH = document.querySelector("h1");
 
 function RunTimer(){
@@ -20,7 +20,9 @@ function RunTimer(){
     if (timeSecond == 0 || timeSecond < 1) {
         endCount();
         clearInterval(countDown);
+        // console.log(timeSecond)
     }
+    console.log(timeSecond)
     }, 1000);
 
     function displayTime(second) {
@@ -89,7 +91,6 @@ function resetState(){
         (answerButtonsElement.firstChild)
     }
 }
-
 
 //DO a while loop here to stop the function 
 function selectAnswer(e){
