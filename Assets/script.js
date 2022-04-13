@@ -117,9 +117,12 @@ function setStatusClass(element, correct){
         console.log(number)
         //////////////////////////////////
         countingWins.innerHTML = "Counting the wins # 12: " + (number);
-        if (number>5){
-            console.log('Bigger than 5')
-        }
+        //function that checks the scor
+        checkScore(number)
+        // if (number>5){
+        //     console.log('Bigger than 5')
+        //     checkScore()
+        // }
 
 
     }else {
@@ -128,10 +131,18 @@ function setStatusClass(element, correct){
     }
 }
 
+
+function checkScore(number){
+    console.log(number)
+    console.log('INSIDE THE CHECKSCORE')
+}
+
+
 function clearStatusClass(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
+
 
 const questions = [
     {
