@@ -115,7 +115,6 @@ function setStatusClass(element, correct){
         console.log('CORRECTYES')
         number = number+1
         console.log(number)
-        //////////////////////////////////
         countingWins.innerHTML = "Counting the wins # 12: " + (number);
     
         //function that checks the scores
