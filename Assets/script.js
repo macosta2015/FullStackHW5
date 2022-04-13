@@ -91,7 +91,6 @@ function selectAnswer(e){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
-    console.log('Hello World2')
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -128,14 +127,37 @@ function setStatusClass(element, correct){
 }
 
 
-function checkScore(number){
-    console.log(number)
-    console.log('INSIDE THE CHECKSCORE')
-    
-    if (number>5){
-            console.log('Inside Function and If: Bigger than 5')
-            checkScore()
-        }
+function checkScore(number){    
+    // console.log('if statement')
+    // if (number>5){
+    //         console.log('Inside Function and If: Bigger than 5')
+    //         checkScore()
+    //     }
+
+    console.log('switch statement')
+    switch(number){
+        case 5:
+            console.log('Value: ' + number)
+            return number
+            break;
+        case 6:
+            console.log('Value: ' + number)
+            return number
+            break;
+        case 7:
+            console.log('Value: ' + number)
+            return number
+            break;
+        case 8:
+            console.log('Value: ' + number)
+            return number
+            break;
+        case 9:
+            console.log('Value: ' + number)
+            return number
+            break;
+
+    }
 
     return((number+1))
 }
