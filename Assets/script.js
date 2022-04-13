@@ -117,6 +117,11 @@ function setStatusClass(element, correct){
         console.log(number)
         //////////////////////////////////
         countingWins.innerHTML = "Counting the wins # 12: " + (number);
+        if (number>5){
+            console.log('Bigger than 5')
+        }
+
+
     }else {
     element.classList.add('wrong')
         console.log('INSIDE THE RED COLOR')
