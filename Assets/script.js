@@ -133,7 +133,6 @@ function checkScore(number){
     //         console.log('Inside Function and If: Bigger than 5')
     //         checkScore()
     //     }
-
     console.log('switch statement')
     switch(number){
         case 5:
