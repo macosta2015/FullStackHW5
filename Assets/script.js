@@ -22,7 +22,9 @@ function RunTimer(){
         clearInterval(countDown);
         // console.log(timeSecond)
     }
-    console.log(timeSecond)
+    testingVariable = timeSecond
+    console.log('testingVariable: '+ testingVariable)
+    return(testingVariable)
     }, 1000);
 
     function displayTime(second) {
@@ -55,7 +57,8 @@ function startGame(){
     console.log('started')
 
     //Running the RunTimer function that begings the clock
-    RunTimer()
+    var timedScore =  RunTimer()
+    console.log('This is the timedScore: ' + timedScore)
 
     startButton.classList.add('hide')
     shuffleQuestions = questions.sort(() => Math.random() - .5)
@@ -134,12 +137,6 @@ function setStatusClass(element, correct){
 
 
 function checkScore(number){    
-    // console.log('if statement')
-    // if (number>5){
-    //         console.log('Inside Function and If: Bigger than 5')
-    //         checkScore()
-    //     }
-    // console.log('switch statement')
     switch(number){
         case 5:
             console.log('Value: ' + number)
