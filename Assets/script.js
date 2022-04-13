@@ -19,11 +19,12 @@ var myArr = [];
 
 
 //Running pushData
-function pushData()
+function pushData(nameScore)
 {
     // get value from the input text
-    var inputText = document.getElementById('inputText').value;
-    
+    // var inputText = document.getElementById('inputText').value;
+    inputText = nameScore
+
     // append data to the array
     myArr.push(inputText);
     
@@ -129,20 +130,25 @@ function selectAnswer(e){
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
+    
     })
     if (shuffleQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
         console.log('LOOPING INSIDE THE QUESTIONS: ' + currentQuestionIndex)
         countingLoops.innerHTML = "Questions answered: " + (currentQuestionIndex+1);
+
     }
     else{
         console.log('DONE WITH QUESTION')
-        var nameScore = window.prompt("What is your name and scores?")
-        console.log("The nameScore is: " + nameScore)
-        //  pushData()
-        startButton.innerText = 'Restart'
+        startButton.innerText = ('Restart')
         startButton.classList.remove('hide')
-        console.log('END OF THE LOOP')
+        console.log('AFTER DONE WITH QUESTION')
+
+
+        // //Code for getting the users input
+        // var nameScore = window.prompt("What is your name and scores?")
+        // pushData(nameScore)
+        // console.log("The nameScore is: " + nameScore)
     }
 }
 
