@@ -79,6 +79,15 @@ startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
+
+
+    //CODE DOES NOT RUN AS WE NEVER GET TO 5
+    if (currentQuestionIndex == 5){
+        //Code for getting the users input
+        var nameScore = window.prompt("What is your name and scores?")
+        pushData(nameScore)
+        console.log("The nameScore is: " + nameScore)
+    }
 })
 
 function startGame(){
@@ -93,11 +102,13 @@ function startGame(){
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
+    console.log('ONE')
 }
 
 function setNextQuestion(){
     resetState()
     showQuestion(shuffleQuestions[currentQuestionIndex]) 
+    console.log('THREE')
 }
 
 function showQuestion(question){
@@ -145,11 +156,10 @@ function selectAnswer(e){
         startButton.classList.remove('hide')
         console.log('AFTER DONE WITH QUESTION')
 
-
         //Code for getting the users input
-        var nameScore = window.prompt("What is your name and scores?")
-        pushData(nameScore)
-        console.log("The nameScore is: " + nameScore)
+        // var nameScore = window.prompt("What is your name and scores?")
+        // pushData(nameScore)
+        // console.log("The nameScore is: " + nameScore)
     }
 }
 
