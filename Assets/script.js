@@ -117,13 +117,10 @@ function setStatusClass(element, correct){
         console.log(number)
         //////////////////////////////////
         countingWins.innerHTML = "Counting the wins # 12: " + (number);
-        //function that checks the scor
-        checkScore(number)
-        // if (number>5){
-        //     console.log('Bigger than 5')
-        //     checkScore()
-        // }
-
+    
+        //function that checks the scores
+        var scoreFunction =  checkScore(number)
+        console.log("Score +1: " + scoreFunction)
 
     }else {
     element.classList.add('wrong')
@@ -135,6 +132,13 @@ function setStatusClass(element, correct){
 function checkScore(number){
     console.log(number)
     console.log('INSIDE THE CHECKSCORE')
+    
+    if (number>5){
+            console.log('Inside Function and If: Bigger than 5')
+            checkScore()
+        }
+
+    return((number+1))
 }
 
 
