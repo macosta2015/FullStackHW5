@@ -14,7 +14,8 @@ const timeH = document.querySelector("h1");
 
 
 // For the arrays
-var myArr = ["A","B","C","D"];
+// var  = ["A","B","C","D"];
+var myArr = [];
 
 
 //Running pushData
@@ -67,7 +68,6 @@ function RunTimer(){
     }
 // End code for the timer 
 }
-
 
 
 let shuffleQuestions, currentQuestionIndex
@@ -137,6 +137,7 @@ function selectAnswer(e){
     }
     else{
         console.log('DONE WITH QUESTION')
+         pushData()
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
         console.log('END OF THE LOOP')
