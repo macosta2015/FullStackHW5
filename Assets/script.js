@@ -127,7 +127,7 @@ function setStatusClass(element, correct){
     
         //function that checks the scores
         var scoreFunction =  checkScore(number)
-        console.log("Score +1: " + scoreFunction)
+        console.log("FINAL SCORE IS +1: " + scoreFunction)
 
     }else {
     element.classList.add('wrong')
