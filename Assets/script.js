@@ -80,35 +80,35 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 
-
     //CODE DOES NOT RUN AS WE NEVER GET TO 5
-    if (currentQuestionIndex == 5){
-        //Code for getting the users input
-        var nameScore = window.prompt("What is your name and scores?")
-        pushData(nameScore)
-        console.log("The nameScore is: " + nameScore)
-    }
+    // if (currentQuestionIndex == 5){
+    //     //Code for getting the users input
+    //     var nameScore = window.prompt("What is your name and scores?")
+    //     pushData(nameScore)
+    //     console.log("The nameScore is: " + nameScore)
+    // }
 })
 
 function startGame(){
-    console.log('started')
 
     //Running the RunTimer function that begings the clock
     var timedScore =  RunTimer()
-    console.log('This is the timedScore: ' + timedScore)
+    // console.log('This is the timedScore: ' + timedScore)
 
     startButton.classList.add('hide')
     shuffleQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
-    console.log('ONE')
+    // console.log('ONE')
 }
 
 function setNextQuestion(){
     resetState()
     showQuestion(shuffleQuestions[currentQuestionIndex]) 
-    console.log('THREE')
+
+    currentQuestion = (currentQuestionIndex+1)
+    console.log("YOU ARE ON QUESTION: " + currentQuestionIndex)
 }
 
 function showQuestion(question){
@@ -147,7 +147,6 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
         console.log('LOOPING INSIDE THE QUESTIONS: ' + currentQuestionIndex)
         countingLoops.innerHTML = "Questions answered: " + (currentQuestionIndex+1);
-
     }
 
     else{
@@ -156,10 +155,10 @@ function selectAnswer(e){
         startButton.classList.remove('hide')
         console.log('AFTER DONE WITH QUESTION')
 
-        //Code for getting the users input
-        // var nameScore = window.prompt("What is your name and scores?")
-        // pushData(nameScore)
-        // console.log("The nameScore is: " + nameScore)
+        CODE FOR GETTING THE USERS INPUT
+        var nameScore = window.prompt("What is your name and scores?")
+        pushData(nameScore)
+        console.log("The nameScore is: " + nameScore)
     }
 }
 
@@ -167,9 +166,9 @@ function setStatusClass(element, correct){
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
-        console.log('CORRECTYES')
+        // console.log('CORRECTYES')
         number = number+1
-        console.log(number)
+        // console.log(number)
         countingWins.innerHTML = "Counting the wins: " + (number);
     
         //function that checks the scores
@@ -178,7 +177,7 @@ function setStatusClass(element, correct){
 
     }else {
     element.classList.add('wrong')
-        console.log('INSIDE THE RED COLOR')
+        // console.log('INSIDE THE RED COLOR')
     }
 }
 
@@ -186,23 +185,23 @@ function setStatusClass(element, correct){
 function checkScore(number){    
     switch(number){
         case 5:
-            console.log('Value: ' + number)
+            // console.log('Value: ' + number)
             return number
             break;
         case 6:
-            console.log('Value: ' + number)
+            // console.log('Value: ' + number)
             return number
             break;
         case 7:
-            console.log('Value: ' + number)
+            // console.log('Value: ' + number)
             return number
             break;
         case 8:
-            console.log('Value: ' + number)
+            // console.log('Value: ' + number)
             return number
             break;
         case 9:
-            console.log('Value: ' + number)
+            // console.log('Value: ' + number)
 
             break;
 
