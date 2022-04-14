@@ -9,7 +9,7 @@ const countingLoops = document.getElementById('coutning-loops')
 let number = 0
 
 // For the timer 
-let timeSecond = 10;
+let timeSecond = 60;
 const timeH = document.querySelector("h1");
 
 
@@ -141,7 +141,7 @@ function selectAnswer(e){
     setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-    
+    console.log('BEFORE IF STATEMENT')
     })
     if (shuffleQuestions.length > currentQuestionIndex + 1){
         nextButton.classList.remove('hide')
@@ -150,16 +150,30 @@ function selectAnswer(e){
     }
 
     else{
-        console.log('DONE WITH QUESTION')
-        startButton.innerText = ('Restart')
-        startButton.classList.remove('hide')
-        console.log('AFTER DONE WITH QUESTION')
+        
+        for (let i = 0; i < 1; i++) {
+            console.log('INSIDE FOR LOOP AFTER ELSE')
+            startButton.innerText = ('Restart') 
+            startButton.classList.remove('hide')
+            console.log('AFTER DONE WITH QUESTION')
+          }
+        // //CODE FOR GETTING THE USERS INPUT
+        // nameScore = window.prompt("What is your name and scores?")
+        // pushData(nameScore)
+        // console.log("The nameScore is: " + nameScore)
+        userInput()
+    }
+    console.log('PRINT AFTER IF AND ELSE')
+}
 
-        CODE FOR GETTING THE USERS INPUT
-        var nameScore = window.prompt("What is your name and scores?")
+
+//Function to get the users Inpute
+function userInput(){
+    //CODE FOR GETTING THE USERS INPUT
+        nameScore = window.prompt("What is your name and time?")
         pushData(nameScore)
         console.log("The nameScore is: " + nameScore)
-    }
+  
 }
 
 function setStatusClass(element, correct){
